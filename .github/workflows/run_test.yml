@@ -29,7 +29,7 @@ jobs:
         id: testRunner
         with:
           unityVersion: auto
-          projectPath: 1v1
+          projectPath: One
           testMode: all
 
       # Upload artifacts
