@@ -28,7 +28,7 @@ jobs:
         with:
           projectPath: One_V_One
           unityVersion: auto
-          targetPlatform: StandaloneWindows64 # Build a Windows 64-bit standalone.
+          targetPlatform: StandaloneWindows # Build a Windows standalone.
       - uses: actions/upload-artifact@v1
         with:
           name: Build
