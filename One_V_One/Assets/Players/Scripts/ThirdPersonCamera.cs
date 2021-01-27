@@ -9,7 +9,7 @@ public class ThirdPersonCamera : MonoBehaviour
     [Header("Dependencies")]
     [HideInInspector] public TheLibrary library;
     [Tooltip("Reference of the Cinemachine camera Follow")] public GameObject cameraFollow;
-    [Tooltip("Reference of the camera is using cinemachine")] public GameObject camera;
+    [Tooltip("Reference of the camera is using cinemachine")] public GameObject playersCamera;
     [Header("Rotation")]
     [Tooltip("Speed of rotation in both Axes")] public Vector2 rotationPower;
     [Header("Options")]
@@ -26,7 +26,7 @@ public class ThirdPersonCamera : MonoBehaviour
 
     public void Start()
     {
-        camera = GameObject.FindGameObjectWithTag("ThirdPersonCamera");
+        playersCamera = GameObject.FindGameObjectWithTag("ThirdPersonCamera");
     }
 
     public void Update()
