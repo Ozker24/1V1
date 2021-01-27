@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 
-public class TestScript : MonoBehaviour
+public class TheScript : MonoBehaviour
 {
 #region Variables
-
+    //This script might be awesome, I dont know what the fuck happends to this system
 #endregion
 
 #region Events

@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
         movementVector = new Vector3(localRotation.x * speed, 0, localRotation.z * speed);
 
         movementVector.y = 0;
-        Vector3 dir = library.thirdPersonCamera.camera.transform.TransformDirection(movementVector); //transforma "movementVect" a un vector correspondiente segun el transform de la camara
+        Vector3 dir = library.thirdPersonCamera.playersCamera.transform.TransformDirection(movementVector); //transforma "movementVect" a un vector correspondiente segun el transform de la camara
         dir.Set(dir.x, 0, dir.z);
         movementVector = dir.normalized * movementVector.magnitude;
 
@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     void DrawDirection()
     {
-        Vector3 camForward = Vector3.ProjectOnPlane(library.thirdPersonCamera.camera.transform.forward, Vector3.up);
+        Vector3 camForward = Vector3.ProjectOnPlane(library.thirdPersonCamera.playersCamera.transform.forward, Vector3.up);
         Debug.DrawRay(transform.root.position, camForward.normalized * 10, Color.red);
     }
     #endregion
